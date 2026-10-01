@@ -1,0 +1,235 @@
+{
+  "contract": "0x5e1DEFa174bDD1e5d74984449dCbb2aB308420e9",
+  "network": "studionet",
+  "run_at": "2026-10-01T05:23:23.378Z",
+  "sponsor": "0x920Cded7ec3A82A1887b885FEA6B95906e736458",
+  "researcher": "0x2945FFAB9F846EaC52aB286abb411ac08397c7F5",
+  "bounty_id": 0,
+  "bounty": {
+    "deadline": 1793424118,
+    "ecosystem": "npm",
+    "eligible_from": 1788220800,
+    "min_severity": "medium",
+    "package": "fastify",
+    "paid_ghsa": "",
+    "paid_login": "",
+    "paid_to": "",
+    "reclaimable_at": 1794028918,
+    "reward": "10000000000000000000",
+    "scope": "Remote code execution or authentication/authorization bypass reachable through fastify's request routing or parsing. Denial of service and crashes are excluded.",
+    "sponsor": "0x920Cded7ec3A82A1887b885FEA6B95906e736458",
+    "status": "open"
+  },
+  "researcher_binding": "",
+  "verdicts": [
+    {
+      "ghsa": "GHSA-p68q-wchp-6fh7",
+      "login": "vvvvvvvvvvitel",
+      "tx": "0xb727b217b5dc0b10056df4d3216672333d46ec0f7320a999dbe22afa5dd80bdf",
+      "verdict": {
+        "accepted": true,
+        "checks": {
+          "credited": true,
+          "not_withdrawn": true,
+          "package_match": true,
+          "published_in_window": true,
+          "reviewed": true,
+          "severity_ok": true
+        },
+        "credit": "reporter",
+        "ghsa": "GHSA-p68q-wchp-6fh7",
+        "in_scope": true,
+        "login": "vvvvvvvvvvitel",
+        "published_at": "2026-09-30T23:45:34Z",
+        "reason": "The issue enables authentication bypass via Fastify's request routing/parsing, which is explicitly covered by the scope.",
+        "severity": "high"
+      }
+    },
+    {
+      "ghsa": "GHSA-4mh8-r7rc-xpvc",
+      "login": "zerovulnlabs",
+      "tx": "0x127f86e8c998e24ee72b42fbd744607ccafd88cd9b639ff45f827b125557275d",
+      "verdict": {
+        "accepted": false,
+        "checks": {
+          "credited": true,
+          "not_withdrawn": true,
+          "package_match": true,
+          "published_in_window": true,
+          "reviewed": true,
+          "severity_ok": true
+        },
+        "credit": "reporter",
+        "ghsa": "GHSA-4mh8-r7rc-xpvc",
+        "in_scope": false,
+        "login": "zerovulnlabs",
+        "published_at": "2026-09-30T23:53:44Z",
+        "reason": "The vulnerability is explicitly described as a denial of service and process crash, both of which are specifically excluded by the sponsor's scope.",
+        "severity": "medium"
+      }
+    },
+    {
+      "ghsa": "GHSA-p68q-wchp-6fh7",
+      "login": "mcollina",
+      "tx": "0x7d986324d5542475298117c10b9850c98bfa88e28e10014f6dfc35b01ed3830c",
+      "verdict": {
+        "accepted": false,
+        "checks": {
+          "credited": false,
+          "not_withdrawn": true,
+          "package_match": true,
+          "published_in_window": true,
+          "reviewed": true,
+          "severity_ok": true
+        },
+        "credit": "",
+        "ghsa": "GHSA-p68q-wchp-6fh7",
+        "in_scope": null,
+        "login": "mcollina",
+        "published_at": "2026-09-30T23:45:34Z",
+        "reason": "",
+        "severity": "high"
+      }
+    },
+    {
+      "ghsa": "GHSA-hxh3-vqpv-xpqv",
+      "login": "ggmolly",
+      "tx": "0x6c0560c584aef141925633a6f0833fa889f5ac326211837cc982863cb4f9b1ce",
+      "verdict": {
+        "accepted": false,
+        "checks": {
+          "credited": true,
+          "not_withdrawn": true,
+          "package_match": false,
+          "published_in_window": true,
+          "reviewed": true,
+          "severity_ok": true
+        },
+        "credit": "reporter",
+        "ghsa": "GHSA-hxh3-vqpv-xpqv",
+        "in_scope": null,
+        "login": "ggmolly",
+        "published_at": "2026-09-30T23:46:16Z",
+        "reason": "",
+        "severity": "medium"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "fn": "open_bounty",
+      "args": [
+        "npm",
+        "fastify",
+        "Remote code execution or authentication/authorization bypass reachable through fastify's request routing or parsing. Denial of service and crashes are excluded.",
+        "medium",
+        1788220800,
+        1793424118
+      ],
+      "tx": "0x743cda22561893b8d38ee52cbcb32bee83de6e0513e69c5599fe9415b5c2c9ab",
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "payload": {
+          "readable": "0"
+        }
+      }
+    },
+    {
+      "fn": "preview_claim",
+      "args": [
+        0,
+        "GHSA-p68q-wchp-6fh7",
+        "vvvvvvvvvvitel"
+      ],
+      "tx": "0xb727b217b5dc0b10056df4d3216672333d46ec0f7320a999dbe22afa5dd80bdf",
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "payload": {
+          "readable": "{\"accepted\":true\"checks\":{\"credited\":true\"not_withdrawn\":true\"package_match\":true\"published_in_window\":true\"reviewed\":true\"severity_ok\":true}\"credit\":\"reporter\"\"ghsa\":\"GHSA-p68q-wchp-6fh7\"\"in_scope\":true\"login\":\"vvvvvvvvvvitel\"\"published_at\":\"2026-09-30T23:45:34Z\"\"reason\":\"The issue enables authentication bypass via Fastify's request routing/parsing, which is explicitly covered by the scope.\"\"severity\":\"high\"}"
+        }
+      }
+    },
+    {
+      "fn": "preview_claim",
+      "args": [
+        0,
+        "GHSA-4mh8-r7rc-xpvc",
+        "zerovulnlabs"
+      ],
+      "tx": "0x127f86e8c998e24ee72b42fbd744607ccafd88cd9b639ff45f827b125557275d",
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "payload": {
+          "readable": "{\"accepted\":false\"checks\":{\"credited\":true\"not_withdrawn\":true\"package_match\":true\"published_in_window\":true\"reviewed\":true\"severity_ok\":true}\"credit\":\"reporter\"\"ghsa\":\"GHSA-4mh8-r7rc-xpvc\"\"in_scope\":false\"login\":\"zerovulnlabs\"\"published_at\":\"2026-09-30T23:53:44Z\"\"reason\":\"The vulnerability is explicitly described as a denial of service and process crash, both of which are specifically excluded by the sponsor's scope.\"\"severity\":\"medium\"}"
+        }
+      }
+    },
+    {
+      "fn": "preview_claim",
+      "args": [
+        0,
+        "GHSA-p68q-wchp-6fh7",
+        "mcollina"
+      ],
+      "tx": "0x7d986324d5542475298117c10b9850c98bfa88e28e10014f6dfc35b01ed3830c",
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "payload": {
+          "readable": "{\"accepted\":false\"checks\":{\"credited\":false\"not_withdrawn\":true\"package_match\":true\"published_in_window\":true\"reviewed\":true\"severity_ok\":true}\"credit\":\"\"\"ghsa\":\"GHSA-p68q-wchp-6fh7\"\"in_scope\":null\"login\":\"mcollina\"\"published_at\":\"2026-09-30T23:45:34Z\"\"reason\":\"\"\"severity\":\"high\"}"
+        }
+      }
+    },
+    {
+      "fn": "preview_claim",
+      "args": [
+        0,
+        "GHSA-hxh3-vqpv-xpqv",
+        "ggmolly"
+      ],
+      "tx": "0x6c0560c584aef141925633a6f0833fa889f5ac326211837cc982863cb4f9b1ce",
+      "status": "ACCEPTED",
+      "execution": "SUCCESS",
+      "result": {
+        "status": "return",
+        "payload": {
+          "readable": "{\"accepted\":false\"checks\":{\"credited\":true\"not_withdrawn\":true\"package_match\":false\"published_in_window\":true\"reviewed\":true\"severity_ok\":true}\"credit\":\"reporter\"\"ghsa\":\"GHSA-hxh3-vqpv-xpqv\"\"in_scope\":null\"login\":\"ggmolly\"\"published_at\":\"2026-09-30T23:46:16Z\"\"reason\":\"\"\"severity\":\"medium\"}"
+        }
+      }
+    },
+    {
+      "fn": "register_researcher",
+      "args": [
+        "vvvvvvvvvvitel"
+      ],
+      "tx": "0x8391b74fc9365163e929e7ae6a4d4490374c36fdefa06c987fe4c546df4840c3",
+      "status": "ACCEPTED",
+      "execution": "ERROR",
+      "result": {
+        "status": "rollback",
+        "payload": "[EXPECTED] vvvvvvvvvvitel has no public profile README"
+      }
+    },
+    {
+      "fn": "claim",
+      "args": [
+        0,
+        "GHSA-p68q-wchp-6fh7"
+      ],
+      "tx": "0x12ecad98a7040eb5bf550a3eba55d47fc74ba4982369b0280a1767416bbb9b9f",
+      "status": "ACCEPTED",
+      "execution": "ERROR",
+      "result": {
+        "status": "rollback",
+        "payload": "[EXPECTED] register your GitHub login first"
+      }
+    }
+  ]
+}

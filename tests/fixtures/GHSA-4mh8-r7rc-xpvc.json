@@ -1,0 +1,56 @@
+{
+ "ghsa_id": "GHSA-4mh8-r7rc-xpvc",
+ "cve_id": "CVE-2026-92081",
+ "summary": "fastify vulnerable to Denial of Service via unhandled exception on HTTP/2 trailer responses",
+ "description": "### Impact\n\n`fastify` crashes with an uncaught `ERR_HTTP2_INVALID_CONNECTION_HEADERS` exception when a route that registers a response trailer via `reply.trailer()` is served over HTTP/2. Fastify unconditionally adds the `Transfer-Encoding: chunked` header when a trailer is set, which is forbidden on HTTP/2, so Node.js throws while serializing the response headers. The exception is not caught and becomes an uncaughtException, terminating the Node.js process.\n\nOne unauthenticated HTTP/2 request to any route that uses trailers is enough to crash the server, dropping all in-flight requests, and t",
+ "type": "reviewed",
+ "severity": "medium",
+ "published_at": "2026-09-30T23:53:44Z",
+ "withdrawn_at": null,
+ "vulnerabilities": [
+  {
+   "package": {
+    "ecosystem": "npm",
+    "name": "fastify"
+   },
+   "vulnerable_version_range": "< 5.12.5",
+   "first_patched_version": "5.12.5"
+  }
+ ],
+ "cvss_severities": {
+  "cvss_v3": {
+   "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+   "score": 5.9
+  },
+  "cvss_v4": {
+   "vector_string": null,
+   "score": 0.0
+  }
+ },
+ "cwes": [
+  {
+   "cwe_id": "CWE-248",
+   "name": "Uncaught Exception"
+  }
+ ],
+ "credits": [
+  {
+   "user": {
+    "login": "zerovulnlabs"
+   },
+   "type": "reporter"
+  },
+  {
+   "user": {
+    "login": "mcollina"
+   },
+   "type": "remediation_developer"
+  },
+  {
+   "user": {
+    "login": "UlisesGascon"
+   },
+   "type": "remediation_reviewer"
+  }
+ ]
+}
